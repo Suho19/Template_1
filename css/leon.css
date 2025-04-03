@@ -1,12 +1,14 @@
 /* Start Variables */
 /* End Variables */
 /* Start Global Rules */
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .container {
@@ -36,50 +38,90 @@ body {
 /* End Global Rules */
 /* Start Header */
 .header {
-    padding: 20px;
+  padding: 20px;
 }
 .header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header .logo {
-    width: 60px;
+  width: 60px;
 }
 
 .header .links {
-    position: relative;
+  position: relative;
 }
 
 .header .links .icons {
-    width: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .header .links:hover .icons span:nth-child(2) {
-    width: 100%;
+  width: 100%;
 }
 
 .header .links .icons span {
-    background-color: #333;
-    margin-bottom: 5px;
-    height: 2px;
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
 }
 
 .header .links .icons span:first-child {
-    width: 100%;
+  width: 100%;
 }
 
 .header .links .icons span:nth-child(2) {
-    width: 50%;
-    transition: width 1s ease;
+  width: 50%;
+  transition: width 1s ease;
 }
-
 
 .header .links .icons span:last-child {
-    width: 100%;
+  width: 100%;
 }
-    
+
+.header .links ul {
+  min-width: 200px;
+  background-color: #f6f6f6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 15px);
+  display: none;
+}
+
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+.header .links ul li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.header .links ul li a:hover {
+  padding-left: 2rem;
+}
+
+.header .links ul li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.header .links:hover > ul {
+  display: block;
+}
 /* End Header */
