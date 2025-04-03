@@ -8,35 +8,6 @@
   --line-height: var(--line-height);
 }
 /* End Variables */
-
-/* Start Components */
-
-.special-heading {
-  color: #ebeced;
-  font-size: 6.25rem;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: -3px;
-  margin: 0;
-}
-
-.special-heading + p {
-  margin-top: -1.5rem;
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-@media (max-width: 767px) {
-  .special-heading {
-    font-size: 4rem;
-  }
-  .special-heading + p {
-    margin-top: -0.75rem;
-  }
-}
-/* Start Components */
-
 /* Start Global Rules */
 *,
 *::before,
@@ -236,8 +207,8 @@ body {
 /* Start Services */
 
 .services {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .services .services-content {
@@ -272,9 +243,9 @@ body {
 }
 
 .services .srv .text p {
-  color: var(--text-color);
+  color: #777;
   font-weight: 300;
-  line-height: var(--line-height);
+  line-height: 1.8;
 }
 
 .services .srv .image-column {
@@ -304,41 +275,3 @@ body {
 }
 
 /* End Services */
-
-/* Start Portfolio */
-
-.portfolio {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background-color: var(--neutral-color);
-}
-
-.portfolio .portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
-  margin-top: 80px;
-}
-
-.portfolio .portfolio-content .card {
-  background-color: #fff;
-}
-.portfolio .portfolio-content .card img {
-  max-width: 100%;
-}
-
-.portfolio .portfolio-content .card .info {
-  padding: 20px;
-}
-
-.portfolio .portfolio-content .card .info h3 {
-  margin: 0;
-}
-
-.portfolio .portfolio-content .card .info p {
-  color: var(--text-color);
-  line-height: var(--line-height);
-  margin-bottom: 0;
-}
-
-/* End Portfolio */
