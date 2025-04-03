@@ -1,9 +1,39 @@
 /* Start Variables */
 :root {
   --primary-color: hsl(182, 99%, 40%);
+  --secondary-color: hsl(202, 35%, 25%);
   --neutral-color: #f6f6f6;
 }
 /* End Variables */
+
+/* Start Components */
+
+.special-heading {
+  color: #ebeced;
+  font-size: 6.25rem;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special-heading + p {
+  margin-top: -1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 4rem;
+  }
+  .special-heading + p {
+    margin-top: -0.75rem;
+  }
+}
+/* Start Components */
+
 /* Start Global Rules */
 *,
 *::before,
@@ -40,6 +70,7 @@ body {
   }
 }
 /* End Global Rules */
+
 /* Start Header */
 .header {
   padding: 20px;
@@ -176,6 +207,7 @@ body {
 .features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
 }
 
 .features .feat {
@@ -197,3 +229,75 @@ body {
 }
 
 /* End Features  */
+
+/* Start Services */
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin-top: 6.25rem;
+}
+
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .srv i {
+  flex-basis: 60px;
+  color: var(--primary-color);
+}
+
+.services .srv .text {
+  flex: 1;
+}
+
+.services .srv .text h3 {
+  margin: 0 0 20px;
+}
+
+.services .srv .text p {
+  color: #777;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.services .srv .image-column {
+  text-align: center;
+  position: relative;
+}
+
+.services .srv .image::before {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-color);
+  width: 80px;
+  height: calc(100% + 100px);
+  top: -50px;
+  right: 0;
+  z-index: -1;
+}
+
+.services .srv .image img {
+  width: 260px;
+}
+
+@media (max-width: 1199px) {
+  .image-column {
+    display: none;
+  }
+}
+
+/* End Services */
