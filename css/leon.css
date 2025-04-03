@@ -1,8 +1,11 @@
 /* Start Variables */
 :root {
+  --text-color: #777;
   --primary-color: hsl(182, 99%, 40%);
   --secondary-color: hsl(202, 35%, 25%);
   --neutral-color: #f6f6f6;
+  --section-padding: 60px;
+  --line-height: var(--line-height);
 }
 /* End Variables */
 
@@ -21,7 +24,7 @@
   margin-top: -1.5rem;
   text-align: center;
   font-size: 1.2rem;
-  color: #777;
+  color: var(--text-color);
 }
 
 @media (max-width: 767px) {
@@ -192,15 +195,15 @@ body {
 
 .landing .intro {
   font-size: 1.25rem;
-  line-height: 1.8;
+  line-height: var(--line-height);
 }
 
 /* End Landing Section */
 /* Start Features  */
 
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   background-color: var(--neutral-color);
 }
 
@@ -223,8 +226,8 @@ body {
   margin: 30px 0;
 }
 .features .feat p {
-  line-height: 1.8;
-  color: #777;
+  line-height: var(--line-height);
+  color: var(--text-color);
   font-size: 1.2rem;
 }
 
@@ -233,8 +236,8 @@ body {
 /* Start Services */
 
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 
 .services .services-content {
@@ -269,9 +272,9 @@ body {
 }
 
 .services .srv .text p {
-  color: #777;
+  color: var(--text-color);
   font-weight: 300;
-  line-height: 1.8;
+  line-height: var(--line-height);
 }
 
 .services .srv .image-column {
@@ -301,3 +304,41 @@ body {
 }
 
 /* End Services */
+
+/* Start Portfolio */
+
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--neutral-color);
+}
+
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+  background-color: #fff;
+}
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0;
+}
+
+.portfolio .portfolio-content .card .info p {
+  color: var(--text-color);
+  line-height: var(--line-height);
+  margin-bottom: 0;
+}
+
+/* End Portfolio */
