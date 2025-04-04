@@ -44,6 +44,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -71,6 +75,10 @@ body {
   .container {
     width: 1170px;
   }
+}
+
+.show {
+  display: block !important;
 }
 /* End Global Rules */
 
@@ -158,10 +166,6 @@ body {
 
 .header .links ul li:not(:last-child) {
   border-bottom: 1px solid #ddd;
-}
-
-.header .links:hover > ul {
-  display: block;
 }
 
 /* End Header */
@@ -431,3 +435,63 @@ body {
   color: var(--text-color);
 }
 /* End About  */
+
+/* Start Contact  */
+
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--neutral-color);
+}
+
+.contact .info {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+
+.contact .info .label {
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+}
+
+.contact .info .link {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact .info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+.contact .info .social i {
+  margin-left: 1.4rem;
+  color: var(--secondary-color);
+}
+
+/* End Contact  */
+
+/* Start Footer */
+
+.footer {
+  padding: 30px 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* End Footer */
